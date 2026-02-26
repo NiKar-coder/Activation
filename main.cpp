@@ -26,17 +26,17 @@ public:
 
 int main() {
     Neuron neuron;
-    string inputLine, valueLine;
+    string input, value;
 
     cout << "inputs: ";
-    getline(cin, inputLine);
-    stringstream ss_in(inputLine);
+    getline(cin, input);
+    stringstream ss_in(input);
     double temp;
     while (ss_in >> temp) neuron.inputs.push_back(temp);
 
     cout << "values: ";
-    getline(cin, valueLine);
-    stringstream ss_val(valueLine);
+    getline(cin, value);
+    stringstream ss_val(value);
     while (ss_val >> temp) neuron.values.push_back(temp);
 
     for (double el : neuron.activate()) {
